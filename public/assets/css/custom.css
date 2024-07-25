@@ -1,0 +1,115 @@
+.personalpadding {
+    padding: 1rem;
+}
+
+.detailspadding {
+    padding-top: 1rem!important;
+    padding-bottom: 1rem!important;
+}
+
+.detailsmargin {
+    margin-top: 1rem!important;
+    margin-bottom: 1rem!important;
+}
+
+.iconrightmargin {
+    margin-right: 0.5rem!important;
+}
+
+.tabbg {
+    background-color: #f9fafd;
+}
+
+.navbggradold {
+    background-color: #2a3468!important;
+    background-image: linear-gradient(to bottom, #2a3468 , #ec465f)!important;
+}
+
+.gstlogo {
+    padding: 1.2rem!important;
+    margin-top: 0.4rem!important;
+}
+
+.roundlogobg {
+    background: rgb(43,52,103);
+
+    background: linear-gradient(152deg, rgba(43,52,103,1) 50%, rgb(236 70 95) 100%);
+}
+
+.roundlogobgred {
+
+    background: rgb(236,70,95);
+    background: linear-gradient(152deg, rgba(236,70,95,1) 50%, rgba(252,255,231,1) 100%);
+}
+
+.roundtext {
+    color: white;
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.cursorpointer {
+    cursor: pointer!important;
+}
+
+.buttonmb4 {
+    margin-bottom: 4rem!important;
+}
+
+.topcurves {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.rowmarg {
+    margin-bottom: 6rem!important;
+}
+
+.bg-card-gradient {
+    background-color: #2b3467;
+}
+
+
+.cardimgwidth {
+    width: 3rem!important;
+}
+
+.logoimgwidth {
+    width: 7rem!important;
+}
+
+.logincolor {
+    color: #fff;
+}
+
+.bluecolor {
+    color:#2a3468
+}
+
+.bgfilter {
+    filter: brightness(0.5);
+}
+
+@media (min-width: 992px) {
+    section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    .w-100 {
+        width: 100%;
+    }
+    
+    .w-15 {
+        width: 15%;
+    }
+    .w-25 {
+        width: 25%;
+    }
+    .w-30 {
+        width: 30%;
+    }
+    .w-35 {
+        width: 35%;
+    }
+}

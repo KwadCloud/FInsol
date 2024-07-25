@@ -1,0 +1,20 @@
+{
+    "name": "boolfalse/clearcaches",
+    "description": "Package for recreating Laravel all caches, and for dropping all DB tables",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Boolfalse\\ClearCaches\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Boolfalse\\ClearCaches\\ClearCachesServiceProvider"
+            ]
+        }
+    }
+}
