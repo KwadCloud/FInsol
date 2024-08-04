@@ -72,7 +72,7 @@
                                     <label class="form-label" for="bootstrap-wizard-validation-wizard-email">
                                         Registration Type
                                     </label>
-                                    <select class="form-control" name="registrion_type" required>
+                                    <select class="form-control" name="registration_type" required>
                                         <option value="new" selected>New Registration</option>
                                         <option value="renewal">Renewal</option>
                                     </select>  
