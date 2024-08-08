@@ -40,7 +40,7 @@
                 @foreach ($forms as $keyname => $form)
                     <?php $user = App\Models\User::where('id', $form['user_id'])->first(); ?>
                     <tr>
-                        <td class="id">{{ $form['user_id'] }}</td>
+                        <td class="id">{{ $form->id }}</td>
                         <td class="name">
                             <a href="{{ url('admin/user/profile/' . $user->id) }}">
                                 {{ $user['name'] }}
