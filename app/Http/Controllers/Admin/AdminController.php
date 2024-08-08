@@ -151,7 +151,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/loan-finance/dashboard/details';
+                    $post['url'] = 'admin/user/loan-finance/details';
                     return $post;
                 }),
         );
@@ -161,7 +161,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -171,7 +171,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -181,7 +181,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -191,7 +191,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -201,7 +201,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -211,7 +211,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -221,7 +221,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -231,7 +231,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -241,7 +241,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -251,7 +251,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -261,7 +261,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -271,7 +271,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -281,7 +281,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -291,7 +291,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -301,7 +301,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -311,7 +311,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -321,7 +321,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -331,7 +331,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -341,7 +341,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -351,7 +351,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -361,7 +361,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/dashboard/details';
+                    $post['url'] = 'admin/user/forms/details';
                     return $post;
                 }),
         );
@@ -371,7 +371,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/loan-finance/dashboard/details';
+                    $post['url'] = 'admin/user/loan-finance/details';
                     return $post;
                 }),
         );
@@ -381,7 +381,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/loan-finance/dashboard/details';
+                    $post['url'] = 'admin/user/loan-finance/details';
                     return $post;
                 }),
         );
@@ -391,7 +391,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/legal-work/dashboard/details';
+                    $post['url'] = 'admin/user/legal-work/details';
                     return $post;
                 }),
         );
@@ -401,7 +401,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/certification/dashboard/details';
+                    $post['url'] = 'admin/user/certification/details';
                     return $post;
                 }),
         );
@@ -411,7 +411,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/certification/dashboard/details';
+                    $post['url'] = 'admin/user/certification/details';
                     return $post;
                 }),
         );
@@ -421,7 +421,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/certification/dashboard/details';
+                    $post['url'] = 'admin/user/certification/details';
                     return $post;
                 }),
         );
@@ -431,7 +431,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/companiesact/dashboard/details';
+                    $post['url'] = 'admin/user/companiesact/details';
                     return $post;
                 }),
         );
@@ -441,7 +441,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/companiesact/dashboard/details';
+                    $post['url'] = 'admin/user/companiesact/details';
                     return $post;
                 }),
         );
@@ -451,7 +451,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/companiesact/dashboard/details';
+                    $post['url'] = 'admin/user/companiesact/details';
                     return $post;
                 }),
         );
@@ -461,7 +461,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/companiesact/dashboard/details';
+                    $post['url'] = 'admin/user/companiesact/details';
                     return $post;
                 }),
         );
@@ -471,7 +471,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/companiesact/dashboard/details';
+                    $post['url'] = 'admin/user/companiesact/details';
                     return $post;
                 }),
         );
@@ -481,7 +481,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/companiesact/dashboard/details';
+                    $post['url'] = 'admin/user/companiesact/details';
                     return $post;
                 }),
         );
@@ -534,14 +534,14 @@ class AdminController extends Controller
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/pan');
+                $data['url'] = url('admin/user/forms/details/pan');
                 break;
             case 'tan':
                 $data['forms'] = UserTanDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/tan');
+                $data['url'] = url('admin/user/forms/details/tan');
                 break;
             case 'gst':
                 $data['forms'] = UserGstDetail::whereIn('status', [1, 2, 3, 4])
@@ -555,126 +555,126 @@ class AdminController extends Controller
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/epf');
+                $data['url'] = url('admin/user/forms/details/epf');
                 break;
             case 'esic':
                 $data['forms'] = UserEsicDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/esic');
+                $data['url'] = url('admin/user/forms/details/esic');
                 break;
             case 'huf':
                 $data['forms'] = UserHufDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/huf');
+                $data['url'] = url('admin/user/forms/details/huf');
                 break;
             case 'trust':
                 $data['forms'] = UserTrustDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/trust');
+                $data['url'] = url('admin/user/forms/details/trust');
                 break;
             case 'trademark':
                 $data['forms'] = UserTrademarkDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/trademark');
+                $data['url'] = url('admin/user/forms/details/trademark');
                 break;
             case 'company':
                 $data['forms'] = UserCompanyDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/company');
+                $data['url'] = url('admin/user/forms/details/company');
                 break;
             case 'udamy':
                 $data['forms'] = UserUdamyDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/udamy');
+                $data['url'] = url('admin/user/forms/details/udamy');
                 break;
             case 'partnership':
                 $data['forms'] = UserPartnershipDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/partnership');
+                $data['url'] = url('admin/user/forms/details/partnership');
                 break;
             case 'import':
                 $data['forms'] = UserImportExportDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/importexport');
+                $data['url'] = url('admin/user/forms/details/importexport');
                 break;
             case 'factory':
                 $data['forms'] = UserFactoryLicenseDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/factorylicense');
+                $data['url'] = url('admin/user/forms/details/factorylicense');
                 break;
             case 'labour':
                 $data['forms'] = UserLabourDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/labour');
+                $data['url'] = url('admin/user/forms/details/labour');
                 break;
             case 'shop':
                 $data['forms'] = UserShopDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/shop');
+                $data['url'] = url('admin/user/forms/details/shop');
                 break;
             case 'iso':
                 $data['forms'] = UserIsoDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/iso');
+                $data['url'] = url('admin/user/forms/details/iso');
                 break;
             case 'fssai':
                 $data['forms'] = UserFssaiDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/fssai');
+                $data['url'] = url('admin/user/forms/details/fssai');
                 break;
             case 'itr':
                 $data['forms'] = UserItrDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/itr');
+                $data['url'] = url('admin/user/forms/details/itr');
                 break;
             case 'tds':
                 $data['forms'] = UserTdsDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/tdr');
+                $data['url'] = url('admin/user/forms/details/tdr');
                 break;
             case 'tax':
                 $data['forms'] = UserTaxauditDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/taxaudit');
+                $data['url'] = url('admin/user/forms/details/taxaudit');
                 break;
             case 'isi':
                 $data['forms'] = UserISIDetail::whereIn('status', [1, 2, 3, 4])
                     ->whereIn('user_id', $users)
                     ->orderBy('id', 'DESC')
                     ->get();
-                $data['url'] = url('admin/user/forms/dashboard/details/isi');
+                $data['url'] = url('admin/user/forms/details/isi');
                 break;
             case 'cma':
                 $data['forms'] = CMA::whereIn('status', [1, 2, 3, 4])
