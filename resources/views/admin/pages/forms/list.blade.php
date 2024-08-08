@@ -26,11 +26,11 @@
         <table class="table table-bordered table-striped fs--1 mb-0">
             <thead class="bg-200 text-900">
                 <tr>
-                    <th class="sort" data-sort="id">ID</th>
+                    <th class="sort" data-sort="id">IDs</th>
                     <th class="sort" data-sort="name">Name</th>
                     <th class="sort" data-sort="mobile">Mobile</th>
                     <th class="sort" data-sort="aadhaar">Aadhaar</th>
-                    <th class="sort" data-sort="email">Email</th>
+                    <th class="sort" data-sort="email">E-mail</th>
                     <th class="sort" data-sort="type">Type</th>
                     <th class="sort" data-sort="status">Status</th>
                     <th>Details</th>
