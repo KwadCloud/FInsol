@@ -63,6 +63,7 @@
                                                 <th class="sort" data-sort="email">Email</th>
                                                 <th class="sort" data-sort="type_of_user">Office</th>
                                                 <th class="sort" data-sort="access_level_id">Access ID</th>
+                                                <th>Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody class="list">
@@ -76,6 +77,10 @@
 
                                                     <td class="access_level_id">
                                                         {{ $user['access_level_id'] }}
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-sm btn-primary" href="{{url('admin/edit-employee/'.$user['id'])}}">Edit</a>
+                                                        <a class="btn btn-sm btn-danger" href="{{url('admin/delete-employee/'.$user['id'])}}">Delete</a>
                                                     </td>
                                                 </tr>
                                             @endforeach

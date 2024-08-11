@@ -1,15 +1,12 @@
 @extends('admin.layouts.admin')
 @section('content')
-
     <div class="row g-3 mb-3">
-
         <div class="col-md-12 col-xxl-3">
             <div class="card h-md-100 ecommerce-card-min-width">
-
                 <div class="card-body d-flex flex-column justify-content-end">
                     <div class="row">
                         <div class="col-8">
-                            <form class="needs-validation" novalidate="" action="{{ url('admin/users/adduser') }}"
+                            <form class="needs-validation" novalidate="" action="{{ url('admin/users/editEmployee') }}"
                                 method="POST">
                                 @csrf
                                 <div class="row">
@@ -34,66 +31,74 @@
                                     <div class="mb-3">
                                         <label class="form-label" for="">Name</label>
                                         <input class="form-control" required="required" type="text" name="name"
-                                            autocomplete="on" required="" id="" />
+                                            autocomplete="on" required="" id="" value="{{ $employee->name }}" />
                                         <div class="invalid-feedback">Please Provide Name</div>
                                     </div>
 
                                     <div class="mb-3">
                                         <label class="form-label" for="">Email</label>
                                         <input class="form-control" type="text" required="required" name="email"
-                                            autocomplete="on" required="" id="" />
+                                            autocomplete="on" required="" id=""
+                                            value="{{ $employee->email }}" />
                                         <div class="invalid-feedback">Please Provide Email</div>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label class="form-label" for="">Password</label>
-                                        <input class="form-control" required="required" type="password" name="password"
-                                            autocomplete="on" required="" id="" />
-                                        <div class="invalid-feedback">Please Provide Password</div>
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="typeofuser" class="form-label">Select Type Of User:</label>
                                         <select class="form-select" name="type_of_user" required id="typeofuser">
                                             <option value="">Type Of User</option>
-                                            <option value="Head Office">Head Office</option>
-                                            <option value="State Office">State Office</option>
-                                            <option value="District Office">District Office</option>
-                                            <option value="Block Office">Block Office</option>
+                                            <option value="Head Office"
+                                                {{ $employee->type_of_user == 'Head Office' ? 'selected' : '' }}>Head Office
+                                            </option>
+                                            <option value="State Office"
+                                                {{ $employee->type_of_user == 'State Office' ? 'selected' : '' }}>State
+                                                Office</option>
+                                            <option value="District Office"
+                                                {{ $employee->type_of_user == 'District Office' ? 'selected' : '' }}>
+                                                District Office</option>
+                                            <option value="Block Office"
+                                                {{ $employee->type_of_user == 'Block Office' ? 'selected' : '' }}>Block
+                                                Office</option>
                                         </select>
                                     </div>
-
-                                    <div class="mb-3 d-none" id="select-state">
-                                        <label for="stateSelect" class="form-label">Select State:</label>
-                                        <select class="form-select" name="state" id="stateSelect">
-                                            <option value="">Select State</option>
-                                            @foreach ($states as $state)
-                                                <option value="{{ $state->id }}">{{ $state->name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-
-                                    <div class="mb-3 d-none" id="select-district">
-                                        <label for="districtSelect" class="form-label">Select District:</label>
-                                        <select class="form-select" name="district" id="districtSelect">
-                                            <option value="">Select District</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="mb-3 d-none" id="select-block">
-                                        <label for="blockSelect" class="form-label">Select Block:</label>
-                                        <select class="form-select" name="block" id="blockSelect">
-                                            <option value="">Select Block</option>
-                                        </select>
-                                    </div>
-
+                                    @if ($states)
+                                        <div class="mb-3 d-none" id="select-state">
+                                            <label for="stateSelect" class="form-label">Select State:</label>
+                                            <select class="form-select" name="state" id="stateSelect">
+                                                <option value="">Select State</option>
+                                                @foreach ($states as $state)
+                                                    <option value="{{ $state->id }}" {{$em_state->id === $state->id ? 'selected' : ''}}>{{ $state->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    @endif
+                                    @if ($districts)
+                                        <div class="mb-3 d-none" id="select-district">
+                                            <label for="districtSelect" class="form-label">Select District:</label>
+                                            <select class="form-select" name="district" id="districtSelect">
+                                                <option value="">Select District</option>
+                                                @foreach ($districts as $district)
+                                                    <option value="{{ $district->d_code }}" {{$em_district->d_code === $district->d_code ? 'selected' : ''}}>{{ $district->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    @endif
+                                    @if ($blocks)
+                                        <div class="mb-3 d-none" id="select-block">
+                                            <label for="blockSelect" class="form-label">Select Block:</label>
+                                            <select class="form-select" name="block" id="blockSelect">
+                                                <option value="">Select Block</option>
+                                                @foreach ($blocks as $block)
+                                                    <option value="{{ $block->id }}" {{$em_block->id === $block->id ? 'selected' : ''}}>{{ $block->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    @endif
                                     <div class="mb-3">
                                         <button class="btn btn-primary d-block w-100 mt-3" type="submit"
-                                            name="submit">Add Employee</button>
+                                            name="submit">Update Employee</button>
                                     </div>
-
                             </form>
-
                         </div>
                     </div>
                 </div>

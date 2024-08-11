@@ -24,6 +24,71 @@ class UserController extends Controller
         $this->middleware('auth:admin');
     }
 
+    public function editEmployeeForm($id)
+    {
+        $employee = Admin::where('id', $id)->first();
+        $states = State::all();
+        switch ($employee->type_of_user) {
+            case "State Office":
+                $em_state = State::where('id', $employee->access_level_id)->first();
+                return view('admin.pages.users.office.edit', compact('employee', 'states', 'em_state'));
+            case "District Office":
+                $em_district = District::where('d_code', $employee->access_level_id)->first();
+                $em_state = State::where('id', $employee->access_level_id)->first();
+                $districts = District::where('state_id', $em_district->state_id)->get();
+                return view('admin.pages.users.office.edit', compact('employee', 'states', 'districts', 'em_state', 'em_district'));
+            case "Block Office":
+                $em_block = Block::where('id', $employee->type_of_user)->first();
+                $blocks = Block::where('district_id', $em_block->district_id)->get();
+                $em_district = District::where('d_code', $em_block->district_id)->first();
+                $districts = District::where('state_id', $em_district->state_id)->get();
+                $em_state = State::where('id', $employee->access_level_id)->first();
+                return view('admin.pages.users.office.edit', compact('employee', 'states', 'districts', 'blocks', 'em_state', 'em_district', 'em_block'));
+            default:
+                return view('admin.pages.users.office.edit', compact('employee'));
+        }
+    }
+
+    public function editEmployee(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'type_of_user' => 'required'
+        ]);
+
+        $inputs = $request->all();
+
+        switch ($request->type_of_user) {
+            case "State Office":
+                $inputs['access_level_id'] = $request->state;
+                break;
+            case "District Office":
+                $inputs['access_level_id'] = $request->district;
+                break;
+            case "Block Office":
+                $inputs['access_level_id'] = $request->block;
+                break;
+            default:
+                $inputs['access_level_id'] = 0;
+        }
+
+        Admin::where('id', $id)->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'type_of_user' => $request->type_of_user,
+            'access_level_id' => $inputs['access_level_id']
+        ]);
+
+        return redirect('admin/employee/all')->with(['message' => 'Employee Updated successfully']);
+    }
+
+    public function deleteEmployee($id)
+    {
+        $employee = Admin::where('id', $id)->delete();
+        return redirect('admin/employee/all');
+    }
+
     public function index()
     {
         $user = Auth::user();
