@@ -220,9 +220,9 @@ class Helper
     public static function createInstaMojoOrder($data)
     {
         $api = new \Instamojo\Instamojo(
-            env('INSTAMOJO_TEST_API_KEY'),
-            env('INSTAMOJO_TEST_AUTH_TOKEN'),
-            env('INSTAMOJO_TEST_URL'),
+            env('INSTAMOJO_API_KEY'),
+            env('INSTAMOJO_AUTH_TOKEN'),
+            env('INSTAMOJO_URL'),
         );
 
         session()->put('form_type', $data["type"]);
