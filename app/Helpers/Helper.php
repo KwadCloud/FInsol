@@ -211,10 +211,6 @@ class Helper
         }
 
         return $baseURL = $baseUrl . '/' . $baseSegment;
-
-
-
-
     }
 
     public static function createInstaMojoOrder($data)
