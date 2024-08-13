@@ -72,7 +72,7 @@
                                             </select>
                                         </div>
                                     @endif
-                                    @if ($districts)
+                                    @if (($employee->type_of_user == 'District Office' || $employee->type_of_user == 'Block Office') && $districts)
                                         <div class="mb-3 d-none" id="select-district">
                                             <label for="districtSelect" class="form-label">Select District:</label>
                                             <select class="form-select" name="district" id="districtSelect">
@@ -83,7 +83,7 @@
                                             </select>
                                         </div>
                                     @endif
-                                    @if ($blocks)
+                                    @if ($employee->type_of_user == 'Block Office' && $blocks)
                                         <div class="mb-3 d-none" id="select-block">
                                             <label for="blockSelect" class="form-label">Select Block:</label>
                                             <select class="form-select" name="block" id="blockSelect">
