@@ -18,7 +18,6 @@ class UserCompanyDetail extends Authenticatable
         'name_of_company',
         'company_number',
         'company_email',
-        'registration_type',
         'company_mobile',
         'comp_rent_elec_img',
         'comp_kyc_img',

@@ -57,7 +57,6 @@ class CompanyController extends Controller
         $data['name_of_company'] = $request->input('name_of_company');
         $data['company_email'] = $request->input('company_email');
         $data['company_mobile'] = $request->input('company_mobile');
-        $data['registration_type'] = $request->input('registration_type');
         $lastInsertedId = UserCompanyDetail::Create($data)->id;        
 
         if ($request->has('companysignatory')) {
