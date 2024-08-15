@@ -86,7 +86,7 @@ class UserController extends Controller
     public function deleteEmployee($id)
     {
         $employee = Admin::where('id', $id)->delete();
-        return redirect('admin/employee/all');
+        return redirect('admin/employee/all')->with(['message' => 'Employee deleted successfully']);
     }
 
     public function index()
@@ -131,14 +131,11 @@ class UserController extends Controller
 
             default:
                 $data['states'] = State::orderBy('name', 'asc')->get();
-                if(request()->has('state') && request('state') != null)
-                {   
+                if (request()->has('state') && request('state') != null) {
                     $data['districts'] = District::where('state_id', request('state'))->orderBy('name', 'asc')->get();
-                    if(request()->has('district') && request('district') != null)
-                    {
+                    if (request()->has('district') && request('district') != null) {
                         $data['blocks'] = Block::where('district_id', request('district'))->orderBy('name', 'asc')->get();
-                        if(request()->has('block') && request('block') != null)
-                        {                   
+                        if (request()->has('block') && request('block') != null) {
                             $data['users'] = User::where('block', request('block'))->orderBy('created_at', 'DESC')->get();
                         } else {
                             $data['users'] = User::where('district', request('district'))->orderBy('created_at', 'DESC')->get();
@@ -148,7 +145,7 @@ class UserController extends Controller
                     }
                 } else {
                     $data['users'] = User::orderBy('created_at', 'DESC')->get();
-                }                
+                }
         }
 
         return view('admin.pages.users.index')->with($data);
@@ -156,8 +153,13 @@ class UserController extends Controller
 
     public function allEmployees()
     {
-        $data['users'] = Admin::select('*')->get();
-        return view('admin.pages.employee.list')->with($data);
+        $user = Auth::user();
+
+        if ($user->type_of_user === 'Head Office') {
+            $data['users'] = Admin::select('*')->get();
+            return view('admin.pages.users.office.list')->with($data);
+        } else
+            return abort(404);
     }
 
     public function ajax()
@@ -235,14 +237,16 @@ class UserController extends Controller
 
     public function addUserForm(Request $request)
     {
-        $states = State::orderBy('name', 'asc')->get();
-        $routeUrl = Helper::getBaseUrl($request);
-        return view('admin.auth.register', compact('states', 'routeUrl'));
+        if (Auth::user()->type_of_user === 'Head Office') {
+            $states = State::orderBy('name', 'asc')->get();
+            $routeUrl = Helper::getBaseUrl($request);
+            return view('admin.pages.users.office.add', compact('states', 'routeUrl'));
+        } else
+            return abort(404);
     }
 
     protected function validator(array $data)
     {
-
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -276,7 +280,7 @@ class UserController extends Controller
                 'model_type' => 'App\Models\Admin',
             ]
         );
-        return redirect('admin/users/all')->with(['message' => 'User Created successfully']);
+        return redirect('admin/employee/all')->with(['message' => 'Employee added successfully']);
     }
 
     public function profile()

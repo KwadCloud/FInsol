@@ -118,8 +118,8 @@ Route::group(
             Route::get('employee/all', 'UserController@allEmployees');
             //Edit Employee
             Route::get('edit-employee/{id}', 'UserController@editEmployeeForm');
-            Route::post('editEmployee/{id}', 'UserController@updateEmployee');
-            Route::get('delete-empolyee/{id}', 'UserController@deleteEmployee');
+            Route::post('editEmployee/{id}', 'UserController@editEmployee');
+            Route::get('delete-employee/{id}', 'UserController@deleteEmployee');
             
             Route::get('payment/history', 'PaymentController@allTransactions');
             Route::get('payment/form-value', 'PaymentController@showFormValue');

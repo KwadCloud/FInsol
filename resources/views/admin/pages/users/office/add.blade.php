@@ -110,10 +110,13 @@
                 switch (selected) {
                     case "State Office":
                         $('#select-state').removeClass('d-none');
+                        $('#select-district').addClass('d-none');
+                        $('#select-block').addClass('d-none');
                         break;
                     case "District Office":
                         $('#select-state').removeClass('d-none');
                         $('#select-district').removeClass('d-none');
+                        $('#select-block').addClass('d-none');
                         break;
                     case "Block Office":
                         $('#select-state').removeClass('d-none');

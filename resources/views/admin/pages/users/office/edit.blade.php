@@ -6,7 +6,7 @@
                 <div class="card-body d-flex flex-column justify-content-end">
                     <div class="row">
                         <div class="col-8">
-                            <form class="needs-validation" novalidate="" action="{{ url('admin/users/editEmployee') }}"
+                            <form class="needs-validation" novalidate="" action="{{ url('admin/editEmployee/'.$employee->id) }}"
                                 method="POST">
                                 @csrf
                                 <div class="row">
@@ -61,39 +61,49 @@
                                                 Office</option>
                                         </select>
                                     </div>
-                                    @if ($states)
-                                        <div class="mb-3 d-none" id="select-state">
-                                            <label for="stateSelect" class="form-label">Select State:</label>
-                                            <select class="form-select" name="state" id="stateSelect">
-                                                <option value="">Select State</option>
+
+                                    <div class="mb-3 {{ isset($states) ? '' : 'd-none' }}" id="select-state">
+                                        <label for="stateSelect" class="form-label">Select State:</label>
+                                        <select class="form-select" name="state" id="stateSelect">
+                                            <option value="">Select State</option>
+                                            @if (isset($states))
                                                 @foreach ($states as $state)
-                                                    <option value="{{ $state->id }}" {{$em_state->id === $state->id ? 'selected' : ''}}>{{ $state->name }}</option>
+                                                    <option value="{{ $state->id }}"
+                                                        {{ $em_state->id === $state->id ? 'selected' : '' }}>
+                                                        {{ $state->name }}</option>
                                                 @endforeach
-                                            </select>
-                                        </div>
-                                    @endif
-                                    @if (($employee->type_of_user == 'District Office' || $employee->type_of_user == 'Block Office') && $districts)
-                                        <div class="mb-3 d-none" id="select-district">
-                                            <label for="districtSelect" class="form-label">Select District:</label>
-                                            <select class="form-select" name="district" id="districtSelect">
-                                                <option value="">Select District</option>
+                                            @endif
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3 {{ isset($districts) ? '' : 'd-none' }}" id="select-district">
+                                        <label for="districtSelect" class="form-label">Select District:</label>
+                                        <select class="form-select" name="district" id="districtSelect">
+                                            <option value="">Select District</option>
+                                            @if (isset($districts))
                                                 @foreach ($districts as $district)
-                                                    <option value="{{ $district->d_code }}" {{$em_district->d_code === $district->d_code ? 'selected' : ''}}>{{ $district->name }}</option>
+                                                    <option value="{{ $district->d_code }}"
+                                                        {{ $em_district->d_code === $district->d_code ? 'selected' : '' }}>
+                                                        {{ $district->name }}</option>
                                                 @endforeach
-                                            </select>
-                                        </div>
-                                    @endif
-                                    @if ($employee->type_of_user == 'Block Office' && $blocks)
-                                        <div class="mb-3 d-none" id="select-block">
-                                            <label for="blockSelect" class="form-label">Select Block:</label>
-                                            <select class="form-select" name="block" id="blockSelect">
-                                                <option value="">Select Block</option>
+                                            @endif
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3 {{ isset($blocks) ? '' : 'd-none' }}" id="select-block">
+                                        <label for="blockSelect" class="form-label">Select Block:</label>
+                                        <select class="form-select" name="block" id="blockSelect">
+                                            <option value="">Select Block</option>
+                                            @if (isset($blocks))
                                                 @foreach ($blocks as $block)
-                                                    <option value="{{ $block->id }}" {{$em_block->id === $block->id ? 'selected' : ''}}>{{ $block->name }}</option>
+                                                    <option value="{{ $block->id }}"
+                                                        {{ $em_block->id === $block->id ? 'selected' : '' }}>
+                                                        {{ $block->name }}</option>
                                                 @endforeach
-                                            </select>
-                                        </div>
-                                    @endif
+                                            @endif
+                                        </select>
+                                    </div>
+
                                     <div class="mb-3">
                                         <button class="btn btn-primary d-block w-100 mt-3" type="submit"
                                             name="submit">Update Employee</button>
@@ -115,10 +125,13 @@
                 switch (selected) {
                     case "State Office":
                         $('#select-state').removeClass('d-none');
+                        $('#select-district').addClass('d-none');
+                        $('#select-block').addClass('d-none');
                         break;
                     case "District Office":
                         $('#select-state').removeClass('d-none');
                         $('#select-district').removeClass('d-none');
+                        $('#select-block').addClass('d-none');
                         break;
                     case "Block Office":
                         $('#select-state').removeClass('d-none');
@@ -133,7 +146,6 @@
             })
 
             $('#stateSelect').change(function() {
-
                 var stateId = $(this).val();
                 if (stateId) {
                     $.ajax({
