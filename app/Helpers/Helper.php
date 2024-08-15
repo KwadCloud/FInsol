@@ -216,9 +216,9 @@ class Helper
     public static function createInstaMojoOrder($data)
     {
         $api = new \Instamojo\Instamojo(
-            env('6d132e7996efbf90b08e07425b433164'),
-            env('9072dfcf93faf2f0a2866fe99c52f41d'),
-            env('https://www.instamojo.com/api/1.1/'),
+            '6d132e7996efbf90b08e07425b433164',
+            '9072dfcf93faf2f0a2866fe99c52f41d',
+            'https://www.instamojo.com/api/1.1/',
         );
 
         session()->put('form_type', $data["type"]);
