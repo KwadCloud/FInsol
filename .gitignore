@@ -3,6 +3,7 @@ finsol.pem
 node_modules/
 npm-debug.log
 yarn-error.log
+/storage/logs/
 
 # Laravel 4 specific
 bootstrap/compiled.php

@@ -34,15 +34,15 @@ class UserController extends Controller
                 return view('admin.pages.users.office.edit', compact('employee', 'states', 'em_state'));
             case "District Office":
                 $em_district = District::where('d_code', $employee->access_level_id)->first();
-                $em_state = State::where('id', $employee->access_level_id)->first();
+                $em_state = State::where('id', $em_district->state_id)->first();
                 $districts = District::where('state_id', $em_district->state_id)->get();
                 return view('admin.pages.users.office.edit', compact('employee', 'states', 'districts', 'em_state', 'em_district'));
             case "Block Office":
-                $em_block = Block::where('id', $employee->type_of_user)->first();
+                $em_block = Block::where('id', $employee->access_level_id)->first();
                 $blocks = Block::where('district_id', $em_block->district_id)->get();
                 $em_district = District::where('d_code', $em_block->district_id)->first();
                 $districts = District::where('state_id', $em_district->state_id)->get();
-                $em_state = State::where('id', $employee->access_level_id)->first();
+                $em_state = State::where('id', $em_district->state_id)->first();
                 return view('admin.pages.users.office.edit', compact('employee', 'states', 'districts', 'blocks', 'em_state', 'em_district', 'em_block'));
             default:
                 return view('admin.pages.users.office.edit', compact('employee'));
