@@ -1,5 +1,5 @@
 <div id="form-table"
-    data-list='{"valueNames":["id","name","mobile","aadhaar","email","type_of_user"],"page":15,"pagination":true}'>
+    data-list='{"valueNames":["id","name","user_id","mobile","aadhaar","email","type_of_user"],"page":15,"pagination":true}'>
     <div class="row justify-content-start g-2">
         <div class="col-md-auto col-sm-12 mb-3 mt-4">
             <form>
@@ -28,6 +28,7 @@
                 <tr>
                     <th class="sort" data-sort="id">ID</th>
                     <th class="sort" data-sort="name">Name</th>
+                    <th class="sort" data-sort="user_id">User ID</th>
                     <th class="sort" data-sort="mobile">Mobile</th>
                     <th class="sort" data-sort="aadhaar">Aadhaar</th>
                     <th class="sort" data-sort="email">Email</th>
@@ -40,12 +41,13 @@
                 @foreach ($forms as $keyname => $form)
                     <?php $user = App\Models\User::where('id', $form['user_id'])->first(); ?>
                     <tr>
-                        <td class="id">{{ $form['user_id'] }}</td>
+                        <td class="id">{{ $form->id }}</td>
                         <td class="name">
                             <a href="{{ url('admin/user/profile/' . $user->id) }}">
                                 {{ $user['name'] }}
                             </a>
                         </td>
+                        <td class="user_id">{{ $user->id }}</td>
                         <td class="mobile">
                             {{ $user['mobile'] }}
                         </td>
@@ -81,7 +83,7 @@
                             @endif
                         </td>
                         <td class="detail">
-                            <a href="{{ url($form->url . '/' . $form->user_id) }}">Details</a>
+                            <a href="{{ url($form->url . '/' . $form->id) }}">Details</a>
                         </td>
                     </tr>
                 @endforeach

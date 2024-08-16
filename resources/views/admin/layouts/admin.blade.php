@@ -75,7 +75,8 @@
                             <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
                                 <li class="nav-item">
                                     <!-- parent pages-->
-                                    <a class="nav-link" href="{{ url('admin') }}">
+                                    <a class="nav-link {{ url()->current() === url('admin') ? 'active' : '' }}"
+                                        href="{{ url('admin') }}">
                                         <div class="d-flex align-items-center">
                                             <span class="nav-link-icon">
                                                 <span class="fas fa-chart-pie"></span>
@@ -86,14 +87,17 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link dropdown-indicator" href="#users" role="button"
-                                        data-bs-toggle="collapse" aria-expanded="false" aria-controls="forms">
+                                    <a class="nav-link dropdown-indicator {{ str_contains(url()->current(), 'admin/users') ? 'collapsed active' : '' }}"
+                                        href="#users" role="button" data-bs-toggle="collapse"
+                                        aria-expanded="{{ str_contains(url()->current(), 'admin/users') ? 'true' : 'false' }}"
+                                        aria-controls="forms">
                                         <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                     class="fas fa-user-alt"></span></span><span
                                                 class="nav-link-text ps-1">Users</span>
                                         </div>
                                     </a>
-                                    <ul class="nav collapse" id="users">
+                                    <ul class="nav collapse {{ str_contains(url()->current(), 'admin/users') ? 'show' : '' }}"
+                                        id="users">
 
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{ url('admin/users/all') }}">
@@ -124,14 +128,17 @@
                                 </li>
                                 @if (Auth::user()->type_of_user === 'Head Office')
                                     <li class="nav-item">
-                                        <a class="nav-link dropdown-indicator" href="#payment" role="button"
-                                            data-bs-toggle="collapse" aria-expanded="false" aria-controls="forms">
+                                        <a class="nav-link dropdown-indicator {{ str_contains(url()->current(), 'admin/payment') ? 'collapsed active' : '' }}"
+                                            href="#payment" role="button" data-bs-toggle="collapse"
+                                            aria-expanded="{{ str_contains(url()->current(), 'admin/payment') ? 'true' : 'false' }}"
+                                            aria-controls="forms">
                                             <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                         class="fas fa-rupee-sign"></span></span><span
                                                     class="nav-link-text ps-1">Payment</span>
                                             </div>
                                         </a>
-                                        <ul class="nav collapse" id="payment">
+                                        <ul class="nav collapse {{ str_contains(url()->current(), 'admin/payment') ? 'show' : '' }}"
+                                            id="payment">
                                             <li class="nav-item"><a class="nav-link"
                                                     href="{{ url('admin/payment/history') }}">
                                                     <div class="d-flex align-items-center"><span
@@ -152,14 +159,17 @@
                                     </li>
                                 @else
                                     <li class="nav-item">
-                                        <a class="nav-link dropdown-indicator" href="#payment" role="button"
-                                            data-bs-toggle="collapse" aria-expanded="false" aria-controls="forms">
+                                        <a class="nav-link dropdown-indicator {{ str_contains(url()->current(), 'admin/payment') ? 'collapsed active' : '' }}"
+                                            href="#payment" role="button" data-bs-toggle="collapse"
+                                            aria-expanded="{{ str_contains(url()->current(), 'admin/payment') ? 'true' : 'false' }}"
+                                            aria-controls="forms">
                                             <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                         class="fas fa-rupee-sign"></span></span><span
                                                     class="nav-link-text ps-1">Payment</span>
                                             </div>
                                         </a>
-                                        <ul class="nav collapse" id="payment">
+                                        <ul class="nav collapse {{ str_contains(url()->current(), 'admin/payment') ? 'show' : '' }}"
+                                            id="payment">
                                             <li class="nav-item"><a class="nav-link"
                                                     href="{{ url('admin/payment/history') }}">
                                                     <div class="d-flex align-items-center"><span
@@ -171,8 +181,10 @@
                                     </li>
                                 @endif
                                 <li class="nav-item">
-                                    <a class="nav-link dropdown-indicator" href="#forms" role="button"
-                                        data-bs-toggle="collapse" aria-expanded="false" aria-controls="forms">
+                                    <a class="nav-link dropdown-indicator {{ str_contains(url()->current(), 'admin/forms') ? 'collapsed active' : '' }}"
+                                        href="#forms" role="button" data-bs-toggle="collapse"
+                                        aria-expanded="{{ str_contains(url()->current(), 'admin/forms') ? 'true' : 'false' }}"
+                                        aria-controls="forms">
                                         <div class="d-flex align-items-center">
                                             <span class="nav-link-icon">
                                                 <span class="fas fa-file-alt"></span>
@@ -181,7 +193,8 @@
                                                 Forms</span>
                                         </div>
                                     </a>
-                                    <ul class="nav collapse" id="forms">
+                                    <ul class="nav collapse {{ str_contains(url()->current(), 'admin/forms') ? 'show' : '' }}"
+                                        id="forms">
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{ url('admin/forms/PAN?form_type=pan') }}">
                                                 <div class="d-flex align-items-center">
@@ -1068,14 +1081,17 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link dropdown-indicator" href="#status" role="button"
-                                        data-bs-toggle="collapse" aria-expanded="false" aria-controls="forms">
+                                    <a class="nav-link dropdown-indicator {{ str_contains(url()->current(), 'admin/status') ? 'collapsed active' : '' }}"
+                                        href="#status" role="button" data-bs-toggle="collapse"
+                                        aria-expanded="{{ str_contains(url()->current(), 'admin/status') ? 'true' : 'false' }}"
+                                        aria-controls="forms">
                                         <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                     class="fas fa-exclamation-circle"></span></span><span
                                                 class="nav-link-text ps-1">Status</span>
                                         </div>
                                     </a>
-                                    <ul class="nav collapse" id="status">
+                                    <ul class="nav collapse {{ str_contains(url()->current(), 'admin/status') ? 'show' : '' }}"
+                                        id="status">
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{ url('admin/status/processing') }}">
                                                 <div class="d-flex align-items-center">

@@ -5,7 +5,7 @@
         <div class="col-md-12 col-xxl-3">
             <div class="card h-md-100 ecommerce-card-min-width">
                 <div class="card-header pb-0">
-                    <h4 class="mb-0 mt-2 d-flex align-items-center">All Forms</h4>
+                    <h4 class="mb-0 mt-2 d-flex align-items-center">Form Status:&nbsp;<span class="text-capitalize">{{$status}}</span></h4>
                 </div>
                 <div class="card-body d-flex flex-column justify-content-end">
 

@@ -151,7 +151,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/loan-finance/details';
+                    $post['url'] = 'admin/user/loan-finance/details/cma';
                     return $post;
                 }),
         );
@@ -161,7 +161,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/pan';
                     return $post;
                 }),
         );
@@ -171,7 +171,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/gsttype/details';
                     return $post;
                 }),
         );
@@ -181,7 +181,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/tan';
                     return $post;
                 }),
         );
@@ -191,7 +191,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/epf';
                     return $post;
                 }),
         );
@@ -201,7 +201,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/esic';
                     return $post;
                 }),
         );
@@ -211,7 +211,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/huf';
                     return $post;
                 }),
         );
@@ -221,7 +221,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/trust';
                     return $post;
                 }),
         );
@@ -231,7 +231,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/trademark';
                     return $post;
                 }),
         );
@@ -241,7 +241,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/company';
                     return $post;
                 }),
         );
@@ -251,7 +251,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/udamy';
                     return $post;
                 }),
         );
@@ -261,7 +261,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/partnership';
                     return $post;
                 }),
         );
@@ -271,7 +271,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/importexport';
                     return $post;
                 }),
         );
@@ -281,7 +281,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/factorylicense';
                     return $post;
                 }),
         );
@@ -291,7 +291,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/labour';
                     return $post;
                 }),
         );
@@ -301,7 +301,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/shop';
                     return $post;
                 }),
         );
@@ -311,7 +311,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/iso';
                     return $post;
                 }),
         );
@@ -321,7 +321,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/fssai';
                     return $post;
                 }),
         );
@@ -331,7 +331,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/itr';
                     return $post;
                 }),
         );
@@ -341,7 +341,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/tds';
                     return $post;
                 }),
         );
@@ -351,7 +351,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/taxaudit';
                     return $post;
                 }),
         );
@@ -361,7 +361,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/forms/details';
+                    $post['url'] = 'admin/user/forms/details/isi';
                     return $post;
                 }),
         );
@@ -371,7 +371,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/loan-finance/details';
+                    $post['url'] = 'admin/user/loan-finance/details/estimated';
                     return $post;
                 }),
         );
@@ -381,7 +381,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/loan-finance/details';
+                    $post['url'] = 'admin/user/loan-finance/details/projectReport';
                     return $post;
                 }),
         );
@@ -401,7 +401,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/certification/details';
+                    $post['url'] = 'admin/user/certification/details/turnover';
                     return $post;
                 }),
         );
@@ -411,7 +411,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/certification/details';
+                    $post['url'] = 'admin/user/certification/details/networth';
                     return $post;
                 }),
         );
@@ -421,7 +421,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/certification/details';
+                    $post['url'] = 'admin/user/certification/details/ca';
                     return $post;
                 }),
         );
@@ -431,7 +431,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/companiesact/details';
+                    $post['url'] = 'admin/user/companiesact/details/minutes';
                     return $post;
                 }),
         );
@@ -441,7 +441,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/companiesact/details';
+                    $post['url'] = 'admin/user/companiesact/details/statutoryaudit';
                     return $post;
                 }),
         );
@@ -451,7 +451,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/companiesact/details';
+                    $post['url'] = 'admin/user/companiesact/details/dinkyc';
                     return $post;
                 }),
         );
@@ -461,7 +461,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/companiesact/details';
+                    $post['url'] = 'admin/user/companiesact/details/aoc';
                     return $post;
                 }),
         );
@@ -471,7 +471,7 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/companiesact/details';
+                    $post['url'] = 'admin/user/companiesact/details/adt';
                     return $post;
                 }),
         );
@@ -481,17 +481,18 @@ class AdminController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get()
                 ->map(function ($post) {
-                    $post['url'] = 'admin/user/companiesact/details';
+                    $post['url'] = 'admin/user/companiesact/details/mgt';
                     return $post;
                 }),
         );
 
-        return $forms;
+        return $forms->sortByDesc('updated_at');
     }
 
     public function status_list($status)
     {
         $data['states'] = State::orderBy('name', 'asc')->get();
+        $data['status'] = $status;
         if (request()->has('state') && request('state') != null)
             $data['districts'] = District::where('state_id', request('state'))->orderBy('name', 'asc')->get();
         if (request()->has('district') && request('district') != null)

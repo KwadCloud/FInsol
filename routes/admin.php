@@ -68,7 +68,7 @@ Route::group(
                 Route::get('forms/statusview', 'FormsDashboardController@statusview')->name('form_statusView');
                 Route::post('forms/additional/file/{id}', 'FormsDashboardController@additionalFile')->name('form_additionalFile');
                 Route::post('forms/approved/file/{id}', 'FormsDashboardController@approvedFile')->name('form_approvedFile');
-                Route::get('forms/details/{name}/{id1}', 'FormsDashboardController@allProfile')->name('allformProfile');
+                Route::get('forms/details/{name}/{Id}', 'FormsDashboardController@allProfile')->name('allformProfile');
                 Route::post('files/{id}', 'FormsDashboardController@allProfileDocDownload')->name('allprofiledocdownload');
 
                 // Display all form related to this user on Companies Act tab
@@ -98,7 +98,7 @@ Route::group(
                 Route::get('legal-work/details/{id1}', 'LegalWorkDashboardController@allProfile')->name('legal_allformProfile');
                 Route::post('legal-work/{id}', 'LegalWorkDashboardController@allProfileDocDownload')->name('legal_allprofiledocdownload');
 
-                // Display all form related to this user on Legal Work
+                // Display all form related to this user on Loan Finance
                 Route::get('loan-finance/dashboard/details/{id}', 'LoanDashboardController@index')->name('loan_dashboard');
                 Route::post('loan-finance/change_status', 'LoanDashboardController@change_status')->name('loan_dashboard_change_status');
                 Route::get('loan-finance/statusview', 'LoanDashboardController@statusview')->name('loan_statusView');

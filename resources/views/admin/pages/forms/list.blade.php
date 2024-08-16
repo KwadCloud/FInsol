@@ -1,5 +1,5 @@
 <div id="form-table"
-    data-list='{"valueNames":["id","name","mobile","aadhaar","email","type","status"],"page":15,"pagination":true}'>
+    data-list='{"valueNames":["id","name","user_id","mobile","aadhaar","email","type","status"],"page":15,"pagination":true}'>
     <div class="row justify-content-start g-2">
         <div class="col-md-auto col-sm-12 mb-3 mt-4">
             <form>
@@ -26,8 +26,9 @@
         <table class="table table-bordered table-striped fs--1 mb-0">
             <thead class="bg-200 text-900">
                 <tr>
-                    <th class="sort" data-sort="id">IDs</th>
+                    <th class="sort" data-sort="id">ID</th>
                     <th class="sort" data-sort="name">Name</th>
+                    <th class="sort" data-sort="user_id">User ID</th>
                     <th class="sort" data-sort="mobile">Mobile</th>
                     <th class="sort" data-sort="aadhaar">Aadhaar</th>
                     <th class="sort" data-sort="email">E-mail</th>
@@ -46,6 +47,7 @@
                                 {{ $user['name'] }}
                             </a>
                         </td>
+                        <td class="user_id">{{ $user->id }}</td>
                         <td class="mobile">
                             {{ $user['mobile'] }}
                         </td>

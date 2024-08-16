@@ -209,7 +209,6 @@ class FormsDashboardController extends Controller
 
     public function allProfileDocDownload(Request $request, $userId)
     {
-
         $files = $request->input('files');
         $id = $request->input('id');
         $commaValues = explode(",", $files);
