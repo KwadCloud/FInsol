@@ -19,16 +19,13 @@ class UserGstController extends Controller
     public function __construct()
     {
         $this->middleware('auth:admin');
-
-        // View::share('action', 'no_add');
-        // View::share('nav', 'users');
     }
 
-    public function index(Request $request, $userId)
+    public function index($id, Request $request)
     {
-        $data['user'] = User::where('id', $userId)->first();
+        $data['user'] = User::where('id', $id)->first();
         $data['routeurl'] = Helper::getBaseUrl($request);
-        $data['usersGst'] = UserGstDetail::select('*')->where('user_id', $userId)->orderBy('id', 'DESC')->get();
+        $data['usersGst'] = UserGstDetail::select('*')->where('user_id', $id)->orderBy('id', 'DESC')->get();
         return view('admin.pages.users.gst')->with($data);
     }
 
@@ -39,9 +36,10 @@ class UserGstController extends Controller
         return view('admin.pages.users.profile')->with($data);
     }
 
-    public function gstProfile($gstId)
+    public function gstProfile($id)
     {
-        $data['gstDetails'] = UserGstDetail::find($gstId);
+        $data['gstDetails'] = UserGstDetail::find($id);
+        $data['user'] = User::find($data['gstDetails']->user_id);
         $data['gstIndividualDocuments'] = Documents::where(['for_multiple' => 'GST'])->get();
 
         $data['gstFirmDocuments'] = Documents::where(['for_multiple' => 'GST Firm'])->get();
@@ -50,9 +48,9 @@ class UserGstController extends Controller
         $data['gstCompanyDocuments'] = Documents::where(['for_multiple' => 'GST Company'])->get();
         $data['gstCompanyDirectorsDocuments'] = Documents::where(['for_multiple' => 'GST Firm Partner'])->get();
 
-        $data['gstFirmPartners'] = UserPartner::where(['user_gst_id' => $gstId])->get();
+        $data['gstFirmPartners'] = UserPartner::where(['user_gst_id' => $id])->get();
 
-        $data['gstCompanyDirectors'] = UserDirector::where(['user_gst_id' => $gstId])->get();
+        $data['gstCompanyDirectors'] = UserDirector::where(['user_gst_id' => $id])->get();
 
         return view('admin.pages.users.gst.gstprofile')->with($data);
     }

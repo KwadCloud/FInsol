@@ -240,7 +240,6 @@ Route::group(
     ],
     function () {
         // All about certification
-
         Route::get('ca/register', 'CaController@register_form')->name('ca.register_form');
         Route::post('ca/register', 'CaController@storeCa')->name('ca.register');
 

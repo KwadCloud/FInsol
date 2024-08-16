@@ -31,11 +31,8 @@ Route::group(
             Route::group(['prefix' => 'users', 'as' => 'users.'], function () {
                 Route::get('all', 'UserController@index')->name('index');
                 Route::get('ajax', 'UserController@ajax')->name('ajax');
-                Route::get('show/{id}', 'UserController@show'); // ->where('id', '[0-9]+');
-                // Route::post('change_status', 'UserController@change_status')->name('change_status');
+                Route::get('show/{id}', 'UserController@show');
                 Route::post('delete', 'UserController@delete')->name('delete');
-
-                // Route::get('gst/details/{id}', 'UserGstController@index')->name('gstDetails');
                 Route::get('addform', 'UserController@addUserForm')->name('addUserForm');
                 Route::post('adduser', 'UserController@addUser')->name('addUser');
             });
@@ -43,7 +40,6 @@ Route::group(
             Route::get('employee/profile/{id}', 'UserController@profile_employee');
 
             Route::group(['prefix' => 'user', 'as' => 'user.'], function () {
-
                 Route::get('gst/details/{id}', 'UserGstController@index')->name('gstDetails');
                 Route::post('gst/change_status', 'UserGstController@change_status')->name('change_status');
                 Route::get('profile/{id}', 'UserGstController@profile')->name('user-profile');

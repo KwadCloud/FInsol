@@ -1,6 +1,5 @@
 @php
     use App\Models\User;
-
 @endphp
 
 <div class="col-lg-8 pe-lg-2">
@@ -44,39 +43,35 @@
             $bootstrapColWidth = 12 / $numOfCols;
             ?>
             <div class="row">
-                <?php foreach ($gstIndividualDocuments as $row){ ?>
-                <div class="col-md-<?php echo $bootstrapColWidth; ?>">
-                    <h6>{{ $row->doc_name }}</h6>
-                    <div class="thumbnail">
-                        @php
-                            $keyname = $row->doc_key_name;
-                        @endphp
+                @foreach ($gstIndividualDocuments as $row)
+                    <div class="col-md-{{ $bootstrapColWidth }}">
+                        <h6>{{ $row->doc_name }}</h6>
+                        <div class="thumbnail">
+                            @php
+                                $keyname = $row->doc_key_name;
+                            @endphp
 
-                        <form action="{{ url('admin/user/gst/files/' . $gstDetails->user_id) }}" method="POST">
-                            @csrf
+                            <form action="{{ url('admin/user/gst/files/' . $gstDetails->user_id) }}" method="POST">
+                                @csrf
 
-                            <input type="hidden" name="files" value="{{ $gstDetails[$keyname] }}">
-                            <input type="hidden" name="gst_type" value="{{ $gstDetails->gst_type }}">
-                            <input type="hidden" name="gst_id" value="{{ $gstDetails->id }}">
+                                <input type="hidden" name="files" value="{{ $gstDetails[$keyname] }}">
+                                <input type="hidden" name="gst_type" value="{{ $gstDetails->gst_type }}">
+                                <input type="hidden" name="gst_id" value="{{ $gstDetails->id }}">
 
-                            <button class="btn btn-primary btn-xs mt-2 bsgstdwbtn" type="submit"><small>Download
-                                    File</small>&nbsp;&nbsp;<span class="text-500 fas fa-download"></span></button>
-                        </form>
-
-                        <!-- <a class=" justify-content-between ms-auto" href="#!">
-         Download
-        </a> -->
-
+                                <button class="btn btn-primary btn-xs mt-2 bsgstdwbtn" type="submit"><small>Download
+                                        File</small>&nbsp;&nbsp;<span class="text-500 fas fa-download"></span></button>
+                            </form>
+                        </div>
+                        <br />
                     </div>
-                    <br />
-                </div>
-                <?php
-                    $rowCount++;
-                    if($rowCount % $numOfCols == 0) echo '</div><div class="row">';
-                }
-                ?>
+                    @php
+                        $rowCount++;
+                        if ($rowCount % $numOfCols == 0) {
+                            echo '</div><div class="row">';
+                        }
+                    @endphp
+                @endforeach
             </div>
-
         </div>
     </div>
 </div>
